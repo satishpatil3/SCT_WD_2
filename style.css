@@ -1,0 +1,92 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #9face6, #74ebd5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.stopwatch-container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  width: 400px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.circle {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  margin: 20px auto;
+}
+
+.circle svg {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  transform: rotate(-90deg);
+}
+
+circle {
+  fill: none;
+  stroke-width: 12;
+  stroke-linecap: round;
+}
+
+circle:first-child {
+  stroke: #eee;
+}
+
+#progress {
+  stroke: #4caf50;
+  stroke-dasharray: 690; 
+  stroke-dashoffset: 690;
+  transition: stroke-dashoffset 0.3s linear;
+}
+
+#display {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.buttons button {
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#startBtn { background: #28a745; color: white; }
+#stopBtn { background: #dc3545; color: white; }
+#resetBtn { background: #ffc107; color: white; }
+#lapBtn { background: #007bff; color: white; }
+
+#laps {
+  margin-top: 20px;
+  list-style: none;
+  padding: 0;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+#laps li {
+  background: #f1f1f1;
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 6px;
+  font-family: monospace;
+}
